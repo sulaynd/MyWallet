@@ -43,13 +43,15 @@ public class WalletServiceImpl implements WalletService {
 
 		if(customers.isEmpty()) {
 
+			Customer createdCustomer = customerRepo.save(customer);
+
 			Wallet wallet = new Wallet();
 			wallet.setBalance(BigDecimal.valueOf(0));
+			wallet.setCustomer(createdCustomer);
 
-			wallet.setCustomer(customer);
 			walletRepo.save(wallet);
 
-			return customerRepo.save(customer);
+			return createdCustomer;
 		}
 		throw new CustomerException("Duplicate Mobile Number [ Already Registered with different customer ] ");
 

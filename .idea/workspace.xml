@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c261fd34-f63e-4822-91f3-f004afacac34" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/module/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/module/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/BeneficiaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/BeneficiaryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/WalletServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/WalletServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2nfPOLBObQx1EercxnCZzqrZw8Z" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MyWalletApplication.executor": "Run",
+    "Application.PaymentWalletApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Volumes/SATA/DevOps/existing_repo/MyWallet/pom.xml",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.3678161",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.MyWalletApplication">
+    <configuration name="MyWalletApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mywallet.MyWalletApplication" />
+      <module name="MyWallet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mywallet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentWalletApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.paymentApp.PaymentWalletApplication" />
+      <module name="PaymentWallet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.paymentApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyWalletApplication" />
+        <item itemvalue="Application.PaymentWalletApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c261fd34-f63e-4822-91f3-f004afacac34" name="Changes" comment="" />
+      <created>1729361124238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729361124238</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/mywallet/service/TransactionServiceImpl.java</url>
+          <line>36</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
