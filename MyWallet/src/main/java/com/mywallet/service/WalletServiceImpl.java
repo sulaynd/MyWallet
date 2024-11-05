@@ -8,6 +8,7 @@ import com.mywallet.model.*;
 import com.mywallet.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class WalletServiceImpl implements WalletService {
 
 	@Autowired
@@ -77,7 +79,7 @@ public class WalletServiceImpl implements WalletService {
 
 	/*---------------------------------------------   Fund Transfer  -------------------------------------------------*/
 	@Override
-	public String fundTransfer( String name, String targetMobileNumber, BigDecimal amount, String key) throws WalletException, CustomerException, TransactionException {
+	public String fundTransfer(String targetMobileNumber, String name,  BigDecimal amount, String key) throws WalletException, CustomerException, TransactionException {
 
 		CurrentUserSession currUserSession = currentSessionRepo.findByUuid(key);
 		if(currUserSession==null) {
@@ -92,7 +94,9 @@ public class WalletServiceImpl implements WalletService {
 
 		List<Beneficiary> beneficiaries = beneficiaryRepo.findByWallet(wallet.getWalletId());
 
-		if(!beneficiaries.contains(beneficiary)) beneficiaryRepo.save(beneficiary);
+		beneficiary.setWallet(wallet);
+		if(!beneficiaries.contains(beneficiary))
+			beneficiaryRepo.save(beneficiary);
 
 
 		List<Customer> customers =  customerRepo.findCustomerByMobile(targetMobileNumber);
@@ -103,7 +107,8 @@ public class WalletServiceImpl implements WalletService {
 
 		Wallet targetWallet = walletRepo.showCustomerWalletDetails(customers.get(0).getCustomerId());
 
-		if(wallet.getBalance().compareTo(amount)<0) throw new WalletException("Add more amount in wallet for transaction");
+		if(wallet.getBalance().compareTo(amount) < 0)
+			throw new WalletException("Add more amount in wallet for transaction");
 
 		targetWallet.setBalance(targetWallet.getBalance().add(amount));
 		walletRepo.save(targetWallet);
@@ -139,6 +144,24 @@ public class WalletServiceImpl implements WalletService {
 			throw new BankAccountException("Add bank account for transaction");
 		}
 
+		BankAccount bankAccount = getBankAccount(amount, accountNo, accounts);
+		wallet.setBalance(wallet.getBalance().add(amount));
+
+		bankAccountRepo.save(bankAccount);
+
+		double value = amount.doubleValue();
+		Transaction transaction = new Transaction("Bank transfer", LocalDate.now(), value,"transferred from bank "+bankAccount.getBankName()+" to wallet");
+		transaction.setWallet(wallet);
+
+
+		transactionService.addTransaction(transaction);
+
+
+		return "Your bank account no "+ accountNo +" debited for "+ amount +" Rs" ;
+
+	}
+
+	private static BankAccount getBankAccount(BigDecimal amount, Integer accountNo, List<BankAccount> accounts) throws BankAccountException {
 		BankAccount bankAccount = null;
 
 		for(BankAccount b : accounts) {
@@ -158,20 +181,7 @@ public class WalletServiceImpl implements WalletService {
 		}
 
 		bankAccount.setBalance(bankAccount.getBalance() - amount.doubleValue());
-		wallet.setBalance(wallet.getBalance().add(amount));
-
-		bankAccountRepo.save(bankAccount);
-
-		double value = amount.doubleValue();
-		Transaction transaction = new Transaction("Bank transfer", LocalDate.now(), value,"transferred from bank "+bankAccount.getBankName()+" to wallet");
-		transaction.setWallet(wallet);
-
-
-		transactionService.addTransaction(transaction);
-
-
-		return "Your bank account no "+ accountNo +" debited for "+ amount +" Rs" ;
-
+		return bankAccount;
 	}
 
 
@@ -194,7 +204,7 @@ public class WalletServiceImpl implements WalletService {
 		Optional<Customer> customer1 = customerRepo.findById(currUserSession.getUserId());
 
 
-		if(!customer1.isPresent()) {
+		if(customer1.isEmpty()) {
 			throw new CustomerException("Customer with given CustomerId not exist");
 		}
 
@@ -222,25 +232,7 @@ public class WalletServiceImpl implements WalletService {
 			throw new BankAccountException("Add bank account for transaction");
 		}
 
-		BankAccount bankAccount = null;
-
-		for(BankAccount b: accounts) {
-			if((b.getAccountNo().toString()).equals(accountNo.toString())) {
-				bankAccount = b;
-				break;
-			}
-
-		}
-
-		if(bankAccount == null){
-			throw new BankAccountException("Bank account number does not match the data of saved accounts");
-		}
-
-		if(bankAccount.getBalance() < amount.doubleValue()) {
-			throw new BankAccountException("Insufficient balance in account");
-		}
-
-		bankAccount.setBalance(bankAccount.getBalance() - amount.doubleValue());
+		BankAccount bankAccount = getBankAccount(amount, accountNo, accounts);
 		wallet.setBalance(wallet.getBalance().add(amount));
 
 		bankAccountRepo.save(bankAccount);

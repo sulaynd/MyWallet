@@ -11,18 +11,18 @@ import java.math.BigDecimal;
 
 public interface WalletService {
 
-	public Customer createCustomerAccount(Customer customer) throws CustomerException;
+	Customer createCustomerAccount(Customer customer) throws CustomerException;
 
-	public BigDecimal showBalance(String mobile, String key) throws CustomerException;
+	BigDecimal showBalance(String mobile, String key) throws CustomerException;
 
-	public String fundTransfer(String name, String targetMobileNumber, BigDecimal amount, String key) throws WalletException, TransactionException, CustomerException;
+	String fundTransfer(String name, String targetMobileNumber, BigDecimal amount, String key) throws WalletException, TransactionException, CustomerException;
 
-	public String depositAmount(BigDecimal amount, Integer accountNo, String key) throws BankAccountException, WalletException, CustomerException, TransactionException;
+	String depositAmount(BigDecimal amount, Integer accountNo, String key) throws BankAccountException, WalletException, CustomerException, TransactionException;
 
 //	public List<Customer> getList(Customer customer, String key) throws CustomerException;
 
-	public Customer updateAccount(Customer customer, String key) throws CustomerException;
+	Customer updateAccount(Customer customer, String key) throws CustomerException;
 
-	public String addMoney(Wallet wallet, Integer accountNo, BigDecimal amount, String key) throws WalletException, BankAccountException, CustomerException, TransactionException;
+	String addMoney(Wallet wallet, Integer accountNo, BigDecimal amount, String key) throws WalletException, BankAccountException, CustomerException, TransactionException;
 
 }

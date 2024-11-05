@@ -47,15 +47,15 @@ public class BeneficiaryServiceImpl implements BeneficiaryService {
       Optional<Customer> customer = customerRepo.findById(currUserSession.getUserId());
       Optional<Wallet> wallet = walletRepo.findById(walletRepo.showCustomerWalletDetails(currUserSession.getUserId()).getWalletId());
 
-      if (!customer.isPresent()) {
+      if (customer.isEmpty()) {
          throw new CustomerException("Beneficiary is not Registered to the Application.");
       }
 
-      if (!wallet.isPresent()){
+      if (wallet.isEmpty()){
          throw new WalletException("Invalid User.");
       }
 
-      Optional<Beneficiary> optional=beneficiaryRepo.findById(beneficiary.getBeneficiaryMobileNumber());
+      Optional<Beneficiary> optional = beneficiaryRepo.findById(beneficiary.getBeneficiaryMobileNumber());
 
       if(optional.isEmpty()) {
          return beneficiaryRepo.save(beneficiary);

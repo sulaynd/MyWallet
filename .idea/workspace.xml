@@ -5,10 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c261fd34-f63e-4822-91f3-f004afacac34" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/exceptions/AuthenticationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/controller/BeneficiaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/controller/BeneficiaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/controller/BillPaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/controller/BillPaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/BankAccountException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/BankAccountException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/BeneficiaryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/BeneficiaryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/BillPaymentException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/BillPaymentException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/CustomerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/CustomerException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/LoginException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/LoginException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/TransactionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/TransactionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/WalletException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/exceptions/WalletException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/BeneficiaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/BeneficiaryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/BeneficiaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/BeneficiaryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/BillPaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/BillPaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/BillPaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/BillPaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/TransactionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/module/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/module/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/security/PaymentWalletUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/security/PaymentWalletUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/security/SecurityCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/security/SecurityCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/security/WallectSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/security/WalletSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/BeneficiaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/BeneficiaryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/BillPaymentServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/BillPaymentServicesImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/WalletServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/WalletServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/util/GetCurrentLoginUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/util/GetCurrentLoginUserDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Payment-Wallet-Application/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +39,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Payment-Wallet-Application" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -48,7 +78,8 @@
     "Application.MyWalletApplication.executor": "Run",
     "Application.PaymentWalletApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Volumes/SATA/DevOps/existing_repo/MyWallet/pom.xml",
     "project.structure.last.edited": "Project",
@@ -57,7 +88,7 @@
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.MyWalletApplication">
+  <component name="RunManager" selected="Application.PaymentWalletApplication">
     <configuration name="MyWalletApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mywallet.MyWalletApplication" />
       <module name="MyWallet" />
@@ -86,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyWalletApplication" />
         <item itemvalue="Application.PaymentWalletApplication" />
+        <item itemvalue="Application.MyWalletApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -112,6 +143,71 @@
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../Payment-Wallet-Application/src/main/java/com/paymentApp/service/BillPaymentServicesImpl.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/TransactionServiceImpl.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/TransactionServiceImpl.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyWallet/src/main/java/com/mywallet/service/WalletServiceImpl.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

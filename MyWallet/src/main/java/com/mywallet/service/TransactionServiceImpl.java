@@ -31,11 +31,17 @@ public class TransactionServiceImpl implements TransactionService{
 
    /*--------------------------------------------   Add Transaction  ------------------------------------------------*/
    @Override
-   public Transaction addTransaction(Transaction tran) throws TransactionException, WalletException { 
-      Optional<Wallet> wallet=   walletRepository.findById(tran.getWallet().getWalletId());
-      if(!wallet.isPresent())throw new WalletException("Wallet id worng.");
-      if(transactionRepository.save(tran) != null)return tran;
-          throw new TransactionException("Data is null");
+   public Transaction addTransaction(Transaction transaction) throws TransactionException, WalletException {
+
+      if(transaction == null){
+         throw new TransactionException("Data is null");
+      }
+
+      Optional<Wallet> wallet = walletRepository.findById(transaction.getWallet().getWalletId());
+      if(wallet.isEmpty())
+         throw new WalletException("Wallet id wrong.");
+
+      return transactionRepository.save(transaction);
    }
 
 
@@ -51,7 +57,7 @@ public class TransactionServiceImpl implements TransactionService{
       Wallet wallet = walletRepository.showCustomerWalletDetails(currUserSession.getUserId());
 
       Optional<Wallet> optional = walletRepository.findById(wallet.getWalletId());
-      if(!optional.isPresent()){
+      if(optional.isEmpty()){
          throw new WalletException("Invalid walletId");
       }
 
@@ -74,7 +80,7 @@ public class TransactionServiceImpl implements TransactionService{
 
       Optional<Transaction> transaction = transactionRepository.findById(transactionId);
 
-      if(!transaction.isPresent()){
+      if(transaction.isEmpty()){
          throw new TransactionException("Invalid transactionId");
       }
       return transaction.get();

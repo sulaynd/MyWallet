@@ -34,16 +34,16 @@ public class BeneficiaryController {
    @PostMapping("/add")
    public ResponseEntity<Beneficiary> addBeneneficiaryMapping(@RequestBody Beneficiary beneficiary, @RequestParam String key) throws BeneficiaryException, WalletException, CustomerException {
       
-      return new ResponseEntity<Beneficiary>(beneficiaryService.addBeneficiary(beneficiary, key),HttpStatus.ACCEPTED);
+      return new ResponseEntity<>(beneficiaryService.addBeneficiary(beneficiary, key), HttpStatus.ACCEPTED);
          
    }
 
 
    /*--------------------------------------------   View Beneficiary - walletId -------------------------------------------------*/
    @GetMapping("/view/walletId")
-   public ResponseEntity<Beneficiary> getBeneneficiaryByWalletIdMapping(@RequestParam Integer walletId ,@RequestParam String key) throws BeneficiaryException, CustomerException{
+   public ResponseEntity<List<Beneficiary>> getBeneneficiaryByWalletIdMapping(@RequestParam Integer walletId ,@RequestParam String key) throws BeneficiaryException, CustomerException{
 
-      return new ResponseEntity<Beneficiary>((Beneficiary) beneficiaryService.findAllByWallet(walletId),HttpStatus.FOUND);
+      return new ResponseEntity<>(beneficiaryService.findAllByWallet(walletId), HttpStatus.FOUND);
 
    }
 
@@ -52,7 +52,7 @@ public class BeneficiaryController {
    @GetMapping("/view/name")
    public ResponseEntity<Beneficiary> getBeneneficiaryByNameMapping(@RequestParam String name,@RequestParam String key) throws BeneficiaryException, CustomerException{
 
-      return new ResponseEntity<Beneficiary>(beneficiaryService.viewBeneficiary(name,key),HttpStatus.FOUND);
+      return new ResponseEntity<>(beneficiaryService.viewBeneficiary(name, key), HttpStatus.FOUND);
 
    }
 
@@ -61,7 +61,7 @@ public class BeneficiaryController {
    @GetMapping("/viewall")
    public ResponseEntity<List<Beneficiary>> getAllBeneneficiaryMapping(@RequestParam String key) throws BeneficiaryException, CustomerException{
 
-      return new ResponseEntity<List<Beneficiary>>(beneficiaryService.viewAllBeneficiary(key),HttpStatus.FOUND);
+      return new ResponseEntity<>(beneficiaryService.viewAllBeneficiary(key), HttpStatus.FOUND);
 
    }
 
@@ -70,7 +70,7 @@ public class BeneficiaryController {
    @DeleteMapping("/delete")
    public ResponseEntity<Beneficiary> deleteBeneneficiaryMapping(@Valid @RequestBody BeneficiaryDTO beneficiary ,@RequestParam String key) throws BeneficiaryException, CustomerException{
       
-      return new ResponseEntity<Beneficiary>(beneficiaryService.deleteBeneficiary(key,beneficiary),HttpStatus.OK);
+      return new ResponseEntity<>(beneficiaryService.deleteBeneficiary(key, beneficiary), HttpStatus.OK);
       
    }
    

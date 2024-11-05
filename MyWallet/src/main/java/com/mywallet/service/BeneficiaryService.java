@@ -10,14 +10,14 @@ import com.mywallet.model.dto.BeneficiaryDTO;
 
 public interface BeneficiaryService {
 	
-	public Beneficiary addBeneficiary(Beneficiary beneficiary, String key) throws BeneficiaryException, CustomerException, WalletException;
+	Beneficiary addBeneficiary(Beneficiary beneficiary, String key) throws BeneficiaryException, CustomerException, WalletException;
 
-	public List<Beneficiary> findAllByWallet(Integer walletId) throws BeneficiaryException;
+	List<Beneficiary> findAllByWallet(Integer walletId) throws BeneficiaryException;
 
-	public Beneficiary viewBeneficiary(String beneficiaryName, String key) throws BeneficiaryException, CustomerException;
+	Beneficiary viewBeneficiary(String beneficiaryName, String key) throws BeneficiaryException, CustomerException;
 
-	public List<Beneficiary> viewAllBeneficiary(String key) throws BeneficiaryException, CustomerException;
+	List<Beneficiary> viewAllBeneficiary(String key) throws BeneficiaryException, CustomerException;
 
-	public Beneficiary deleteBeneficiary(String key, BeneficiaryDTO beneficiaryDTO) throws BeneficiaryException, CustomerException;
+	Beneficiary deleteBeneficiary(String key, BeneficiaryDTO beneficiaryDTO) throws BeneficiaryException, CustomerException;
 
 }

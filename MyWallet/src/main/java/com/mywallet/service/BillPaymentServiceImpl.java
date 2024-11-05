@@ -24,7 +24,7 @@ public class BillPaymentServiceImpl implements BillPaymentService{
 
 	/*--------------------------------------------   Add Bill Payment -------------------------------------------------*/
 	@Override
-	public String addBillPayment(String targetMobile, String Name, double amount, String billType, LocalDate paymentDate, Integer walletId, String key) throws BillPaymentException  {
+	public BillPayment addBillPayment(String targetMobile, String Name, double amount, String billType, LocalDate paymentDate, Integer walletId, String key) throws BillPaymentException  {
 
 		BigDecimal value = BigDecimal.valueOf(amount);
 
@@ -32,10 +32,10 @@ public class BillPaymentServiceImpl implements BillPaymentService{
 
 		BillPayment billPayment = new BillPayment(amount, billType, LocalDate.now());
 
-		billPaymentRepo.save(billPayment);
+		return billPaymentRepo.save(billPayment);
 
 //		return str;
 
-		return "";
+	//	return "";
 	}
 }
